@@ -1,0 +1,79 @@
+{
+  "id": "4727898",
+  "name": "低代码平台",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "741065",
+      "name": "预览",
+      "font_class": "yulan",
+      "unicode": "e852",
+      "unicode_decimal": 59474
+    },
+    {
+      "icon_id": "8269012",
+      "name": "G关闭",
+      "font_class": "Gguanbi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "12331650",
+      "name": "导入",
+      "font_class": "daoru1",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "12331658",
+      "name": "导出",
+      "font_class": "daochu1",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "3255777",
+      "name": "置顶",
+      "font_class": "control-top",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "1348242",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "3255778",
+      "name": "置底",
+      "font_class": "control-bottom",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "4425897",
+      "name": "循环",
+      "font_class": "xunhuan",
+      "unicode": "e7b1",
+      "unicode_decimal": 59313
+    },
+    {
+      "icon_id": "7789621",
+      "name": "重做",
+      "font_class": "zhongzuo",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7789608",
+      "name": "撤销",
+      "font_class": "chexiao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

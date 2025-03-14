@@ -63,3 +63,30 @@ data.value = {
 初始化设置前一个状态 监控到拖拽开始 把data中已存入的blocks赋值给before 拖拽结束后存入拖拽的blocks  触发drag的execute事件  
 Excute中将刚刚赋值的before给before 将刚刚存入的拖拽元素给after 当触发redo和undo两个事件时 分别将before和after传递给他们
 State是对整个模块的状态管理
+
+这段的emit过程分析
+props: {
+        modelValue: { type: Object },
+        formData: { type: Object }
+    },
+    emits: ['update:modelValue'],
+    setup(props, ctx) {
+        //预览模式 开启的时候无法操作内容
+
+        const previewRef = ref(false);
+        const editorRef = ref(true);
+
+        const data = computed({
+            get() {
+                return props.modelValue
+            },
+            set(newValue) {
+                ctx.emit('update:modelValue', deepcopy(newValue))
+            }
+        });
+当 data 的 set 方法被调用时（这通常发生在某个地方修改了 data 的值，尽管这里没有直接展示），它会执行 ctx.emit('update:modelValue', deepcopy(newValue))。
+ctx 是 setup 函数的第二个参数，它包含了组件的上下文信息，包括用于触发事件的方法 emit。
+'update:modelValue' 是要触发的事件名称。在 Vue 中，以 update: 开头的事件名称通常用于 .sync 修饰符或 v-model 的双向绑定。这意味着父组件可以使用 v-model 绑定到 modelValue prop 上，并自动接收 update:modelValue 事件来更新绑定的值。
+deepcopy(newValue) 是传递给事件处理函数的参数，用于确保传递给父组件的是新值的一个独立副本，而不是原始值的引用。
+
+        
